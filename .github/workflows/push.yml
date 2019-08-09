@@ -1,0 +1,12 @@
+on: push
+name: New workflow
+jobs:
+  gitHubActionForNpm:
+    name: GitHub Action for npm
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@master
+    - name: GitHub Action for npm
+      uses: actions/npm@59b64a598378f31e49cb76f27d6f3312b582f680
+    - name: HTTP client
+      uses: swinton/httpie.action@69125d73caa2c6821f6a41a86112777a37adc171
